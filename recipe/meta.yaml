@@ -20,12 +20,11 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - hyperspy >1.2
-    - scikit-image <0.15
-    - matplotlib <3.1.0
+    - diffsims
+    - hyperspy >=1.3
+    - scikit-image >=0.15
+    - matplotlib >=3.1.1
     - scikit-learn >=0.19
-    - transforms3d
-    - diffpy.structure
 
 test:
   requires:
@@ -46,8 +45,8 @@ about:
   license: GPL-3.0
   license_family: GPL
   license_file: LICENSE
-  summary: An open-source Python library for crystallographic electron microscopy
-  doc_url: http://pyxem.github.io/pyxem/
+  summary: An open-source Python library for crystallographic diffraction microscopy
+  doc_url: http://pyxem.github.io/pyxem-website/
 
 extra:
   recipe-maintainers:
