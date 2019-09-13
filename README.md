@@ -7,7 +7,7 @@ Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: An open-source Python library for crystallographic electron microscopy
+Summary: An open-source Python library for crystallographic diffraction microscopy
 
 
 
