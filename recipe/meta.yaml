@@ -27,6 +27,8 @@ requirements:
     - scikit-image >=0.15
     - matplotlib >=3.1.1
     - scikit-learn >=0.19
+    - lmfit >= 0.9.12
+    - pyfai
 
 test:
   requires:
