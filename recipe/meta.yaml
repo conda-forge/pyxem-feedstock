@@ -36,7 +36,7 @@ test:
   imports:
     - pyxem
     - pyxem.utils
-    - pyxem.io_plugins
+    - pyxem.detectors
     - pyxem.components
     - pyxem.generators
     - pyxem.signals
