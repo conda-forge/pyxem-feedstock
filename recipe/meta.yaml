@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8b2579bf8568e32a4ad69be2810b300431d69f6691ed473f5aadb9471c7bc3bf
+  sha256: 9794a1560f2d3f22905853b5fd9db74018428bd47a366d5a894dee7362142cb0
 
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
@@ -22,7 +22,7 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - diffsims
+    - diffsims >=0.2.2
     - hyperspy >=1.5.2
     - scikit-image >=0.15
     - matplotlib >=3.1.1
