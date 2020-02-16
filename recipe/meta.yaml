@@ -12,7 +12,7 @@ source:
 
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
 
@@ -25,7 +25,7 @@ requirements:
     - diffsims >=0.2.2
     - hyperspy >=1.5.2
     - scikit-image >=0.15
-    - matplotlib >=3.1.1
+    - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - lmfit >=0.9.12
     - pyfai
