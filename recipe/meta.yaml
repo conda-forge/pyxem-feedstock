@@ -22,13 +22,14 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - diffsims >=0.2.2
+    - diffsims >=0.2.3
     - hyperspy >=1.5.2
-    - scikit-image >=0.15
+    - scikit-image ==0.16.2
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - lmfit >=0.9.12
     - pyfai
+    - numba
 
 test:
   requires:
