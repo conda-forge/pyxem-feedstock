@@ -43,7 +43,6 @@ test:
     - pyxem.signals
     - pyxem.libraries
     - pyxem.dummy_data
-    - pyxem.io_plugins
   commands:
     - pytest --pyargs pyxem
 
