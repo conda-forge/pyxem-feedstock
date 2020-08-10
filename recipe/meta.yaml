@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.11.0" %}
+{% set version = "0.12.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9f4150fce107a9f5b906d575abad68f00f9f9531dc712c60aed391a5166221f
+  sha256: 5470c1406f255047de489c4632d869a2cc9e515616587bcf63ac1bf6ae42e931
 
 
 build:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3
     - diffsims >=0.2.3
-    - hyperspy >=1.5.2
+    - hyperspy ==1.5.2
     - scikit-image ==0.16.2
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
@@ -42,6 +42,7 @@ test:
     - pyxem.generators
     - pyxem.signals
     - pyxem.libraries
+    - pyxem.dummy_data
   commands:
     - pytest --pyargs pyxem
 
