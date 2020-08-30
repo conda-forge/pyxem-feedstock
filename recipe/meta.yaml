@@ -23,12 +23,12 @@ requirements:
   run:
     - python >=3
     - diffsims >=0.2.3
-    - hyperspy ==1.5.2
+    - hyperspy-base ==1.5.2
     - scikit-image ==0.16.2
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - lmfit >=0.9.12
-    - pyfai
+    - pyfai-base
     - numba
 
 test:
