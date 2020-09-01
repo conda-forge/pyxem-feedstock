@@ -30,6 +30,7 @@ requirements:
     - lmfit >=0.9.12
     - pyfai-base
     - numba
+    - ipywidgets
 
 test:
   requires:
