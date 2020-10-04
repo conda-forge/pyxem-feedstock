@@ -22,18 +22,22 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - diffsims >=0.2.3
-    - hyperspy ==1.5.2
-    - scikit-image ==0.16.2
-    - matplotlib-base >=3.1.1
-    - scikit-learn >=0.19
-    - lmfit >=0.9.12
-    - pyfai
+    - scikit-image >=0.15.0 
+    - matplotlib-base >=3.1.1 
+    - scikit-learn >=0.19 
+    - hyperspy-base ==1.5.2 
+    - diffsims >=0.3 
+    - lmfit >=0.9.12 
+    - ipywidgets 
+    - pyfai-base 
     - numba
 
 test:
   requires:
-    - pytest
+    - pytest>=5.0 
+    - pytest-cov>=2.8.1 
+    - coveralls>=1.10 
+    - coverage>=5.0
   imports:
     - pyxem
     - pyxem.utils
