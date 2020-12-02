@@ -22,10 +22,10 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - scikit-image >=0.15.0,<0.17
+    - scikit-image >=0.17.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
-    - hyperspy-base ==1.5.2
+    - hyperspy-base ==1.6.1
     - diffsims >=0.3
     - lmfit >=0.9.12
     - ipywidgets
