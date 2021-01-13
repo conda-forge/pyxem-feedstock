@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.12.3" %}
+{% set version = "0.13.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ff3c34b798b34b64685c1af1c8dbe2a39c7d0d5aa53b1b7b110727140f7274a5
+  sha256: f2e31bc81fb57c7a2b4efd8ba33d423c1e6b0213b6efbeb9f785c4fe0ad9cd85
 
 
 build:
@@ -19,18 +19,20 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python >=3,<3.9
   run:
-    - python >=3
+    - python >=3,<3.9
     - scikit-image >=0.17.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - hyperspy-base ==1.6.1
-    - diffsims >=0.3
+    - diffsims >=0.4
     - lmfit >=0.9.12
     - ipywidgets
     - pyfai-base
     - numba
+    - wcwidth ==0.1.9
+    - orix >=0.3
 
 test:
   requires:
@@ -48,7 +50,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem -k "not test_fit_atomic_scattering and not test_get_reduced_intensity and not test_multiple_scatter_correction and not test_separate_watershed"
+    - pytest --pyargs pyxem
 
 about:
   home: https://github.com/pyxem/pyxem
