@@ -19,9 +19,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3
+    - python >=3,<3.9
   run:
-    - python >=3
+    - python >=3,<3.9
     - scikit-image >=0.17.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
@@ -31,6 +31,7 @@ requirements:
     - ipywidgets
     - pyfai-base
     - numba
+    - wcwidth == 0.1.9
 
 test:
   requires:
