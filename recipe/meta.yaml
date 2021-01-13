@@ -32,6 +32,7 @@ requirements:
     - pyfai-base
     - numba
     - wcwidth ==0.1.9
+    - orix >=0.3
 
 test:
   requires:
