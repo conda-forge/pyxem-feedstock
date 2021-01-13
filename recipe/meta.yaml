@@ -31,7 +31,7 @@ requirements:
     - ipywidgets
     - pyfai-base
     - numba
-    - wcwidth == 0.1.9
+    - wcwidth ==0.1.9
 
 test:
   requires:
