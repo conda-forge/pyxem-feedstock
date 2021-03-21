@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.13.0" %}
+{% set version = "0.13.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f2e31bc81fb57c7a2b4efd8ba33d423c1e6b0213b6efbeb9f785c4fe0ad9cd85
+  sha256: e41c85aaefc84d43cb6f73ccc58f17ff804b1eb893016954b00a96d255be42ff
 
 
 build:
@@ -26,12 +26,11 @@ requirements:
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - hyperspy-base ==1.6.1
-    - diffsims >=0.4
+    - diffsims >=0.4.1,<0.5
     - lmfit >=0.9.12
     - ipywidgets
     - pyfai-base
     - numba
-    - wcwidth ==0.1.9
     - orix >=0.3
 
 test:
