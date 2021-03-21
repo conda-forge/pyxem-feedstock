@@ -26,12 +26,11 @@ requirements:
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
     - hyperspy-base ==1.6.1
-    - diffsims >=0.4
+    - diffsims >=0.4.1,<0.5
     - lmfit >=0.9.12
     - ipywidgets
     - pyfai-base
     - numba
-    - wcwidth ==0.1.9
     - orix >=0.3
 
 test:
