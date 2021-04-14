@@ -49,7 +49,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem -k "not test_segments" 
+    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image" 
 
 about:
   home: https://github.com/pyxem/pyxem
