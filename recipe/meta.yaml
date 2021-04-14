@@ -49,7 +49,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem
+    - pytest --pyargs pyxem -k "not test_segments" 
 
 about:
   home: https://github.com/pyxem/pyxem
