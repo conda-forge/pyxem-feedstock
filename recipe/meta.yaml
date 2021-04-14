@@ -19,13 +19,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3,<3.9
+    - python >=3
   run:
-    - python >=3,<3.9
+    - python >=3
     - scikit-image >=0.17.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
-    - hyperspy-base ==1.6.1
+    - hyperspy-base ==1.6.2
     - diffsims >=0.4.1,<0.5
     - lmfit >=0.9.12
     - ipywidgets
