@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e41c85aaefc84d43cb6f73ccc58f17ff804b1eb893016954b00a96d255be42ff
+  sha256: a1681baa70640292a6e5ce7929ecacacca28828043c6287087597162fe18d85c
 
 
 build:
@@ -19,13 +19,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3,<3.9
+    - python >=3
   run:
-    - python >=3,<3.9
-    - scikit-image >=0.17.0
+    - python >=3
+    - scikit-image ~=0.18.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
-    - hyperspy-base ==1.6.1
+    - hyperspy-base ==1.6.2
     - diffsims >=0.4.1,<0.5
     - lmfit >=0.9.12
     - ipywidgets
@@ -49,7 +49,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem
+    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image" 
 
 about:
   home: https://github.com/pyxem/pyxem
