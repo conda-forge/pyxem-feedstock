@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a1681baa70640292a6e5ce7929ecacacca28828043c6287087597162fe18d85c
+  sha256: a2c7db5e1de0fc94c764110aacde16fa0c2bfd3ac66fc3916f4f24cf52a13e16
 
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -49,7 +49,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image" 
+    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image"
 
 about:
   home: https://github.com/pyxem/pyxem
