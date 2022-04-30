@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.13.3" %}
+{% set version = "0.14.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a2c7db5e1de0fc94c764110aacde16fa0c2bfd3ac66fc3916f4f24cf52a13e16
+  sha256: 340a90fec02fe0618d99e7d99938de15de8c82ad516075f00c16305956a41dd6
 
 
 build:
@@ -22,11 +22,11 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - scikit-image ~=0.18.0
+    - scikit-image >=0.17.0
     - matplotlib-base >=3.1.1
     - scikit-learn >=0.19
-    - hyperspy-base >=1.6.2
-    - diffsims >=0.4.1,<0.5
+    - hyperspy-base >=1.7.0
+    - diffsims >=0.4.1
     - lmfit >=0.9.12
     - ipywidgets
     - pyfai-base
@@ -63,3 +63,4 @@ extra:
   recipe-maintainers:
     - dnjohnstone
     - pc494
+    - magnunor
