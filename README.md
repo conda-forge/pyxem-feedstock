@@ -146,5 +146,6 @@ Feedstock Maintainers
 =====================
 
 * [@dnjohnstone](https://github.com/dnjohnstone/)
+* [@magnunor](https://github.com/magnunor/)
 * [@pc494](https://github.com/pc494/)
 
