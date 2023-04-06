@@ -1,11 +1,11 @@
-About pyxem
-===========
+About pyxem-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxem-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pyxem/pyxem
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyxem-feedstock/blob/main/LICENSE.txt)
 
 Summary: An open-source Python library for crystallographic diffraction microscopy
 
