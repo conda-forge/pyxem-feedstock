@@ -58,11 +58,11 @@ test:
 
 about:
   home: https://github.com/pyxem/pyxem
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: An open-source Python library for crystallographic diffraction microscopy
-  doc_url: http://pyxem.github.io/pyxem-website/
+  doc_url: https://pyxem.readthedocs.io
 
 extra:
   recipe-maintainers:
