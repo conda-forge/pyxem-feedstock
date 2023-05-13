@@ -23,18 +23,22 @@ requirements:
   run:
     - python >=3
     - dask-core >=2021.8.1
-    - scikit-image >=0.19.0
-    - matplotlib-base >=3.3
-    - scikit-learn >=1.0
-    - hyperspy-base >=1.7.0
     - diffsims >=0.5
-    - lmfit >=0.9.12
+    - hyperspy-base >=1.7.0
+    - h5py
     - ipywidgets
-    - pyfai-base
+    - lmfit >=0.9.12
+    - matplotlib-base >=3.3
     - numba
     - numpy
     - orix >=0.9
+    - psutil
+    - pyfai-base
+    - scikit-image >=0.19.0
+    - scikit-learn >=1.0
     - scipy
+    - tqdm
+    - traits
     - transforms3d
 
 test:
@@ -54,7 +58,7 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image"
+    - pytest --pyargs pyxem -n 2
 
 about:
   home: https://github.com/pyxem/pyxem
