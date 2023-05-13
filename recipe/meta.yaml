@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.15.0" %}
+{% set version = "0.15.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3d451180d64ae22f6b9933c9598635693857d1241e6ca3558b9671802e945350
+  sha256: 0d657ee57600c2e111191463720127bce98aa845ae361dafa2ddeb664c019d73
 
 
 build:
@@ -22,16 +22,24 @@ requirements:
     - python >=3
   run:
     - python >=3
-    - scikit-image >=0.19.0
-    - matplotlib-base >=3.3
-    - scikit-learn >=1.0
-    - hyperspy-base >=1.7.0
+    - dask-core >=2021.8.1
     - diffsims >=0.5
-    - lmfit >=0.9.12
+    - hyperspy-base >=1.7.0
+    - h5py
     - ipywidgets
-    - pyfai-base
+    - lmfit >=0.9.12
+    - matplotlib-base >=3.3
     - numba
+    - numpy
     - orix >=0.9
+    - psutil
+    - pyfai-base
+    - scikit-image >=0.19.0
+    - scikit-learn >=1.0
+    - scipy
+    - tqdm
+    - traits
+    - transforms3d
 
 test:
   requires:
@@ -39,6 +47,7 @@ test:
     - pytest-cov>=2.8.1
     - coveralls>=1.10
     - coverage>=5.0
+    - pytest-xdist
   imports:
     - pyxem
     - pyxem.utils
@@ -49,15 +58,15 @@ test:
     - pyxem.libraries
     - pyxem.dummy_data
   commands:
-    - pytest --pyargs pyxem -k "not test_segments and not test_virtual_dark_field_image"
+    - pytest --pyargs pyxem -n 2
 
 about:
   home: https://github.com/pyxem/pyxem
-  license: GPL-3.0-only
+  license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: An open-source Python library for crystallographic diffraction microscopy
-  doc_url: http://pyxem.github.io/pyxem-website/
+  doc_url: https://pyxem.readthedocs.io
 
 extra:
   recipe-maintainers:
