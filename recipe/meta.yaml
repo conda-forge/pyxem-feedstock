@@ -22,6 +22,7 @@ requirements:
     - python >=3
   run:
     - python >=3
+    - dask-core >=2021.8.1
     - scikit-image >=0.19.0
     - matplotlib-base >=3.3
     - scikit-learn >=1.0
@@ -31,7 +32,10 @@ requirements:
     - ipywidgets
     - pyfai-base
     - numba
+    - numpy
     - orix >=0.9
+    - scipy
+    - transforms3d
 
 test:
   requires:
@@ -39,6 +43,7 @@ test:
     - pytest-cov>=2.8.1
     - coveralls>=1.10
     - coverage>=5.0
+    - pytest-xdist
   imports:
     - pyxem
     - pyxem.utils
