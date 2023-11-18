@@ -24,17 +24,17 @@ requirements:
     - python >=3
     - dask-core >=2021.8.1
     - diffsims >=0.5
-    - hyperspy-base >=1.7.0
+    - hyperspy-base >=1.7.0,<2.0rc0
     - h5py
-    - ipywidgets
     - lmfit >=0.9.12
     - matplotlib-base >=3.3
     - numba
     - numpy
+    - numexpr !=2.8.6
     - orix >=0.9
     - psutil
     - pyfai-base
-    - scikit-image >=0.19.0
+    - scikit-image >=0.19.0,!=0.21.0
     - scikit-learn >=1.0
     - scipy
     - tqdm
@@ -44,21 +44,20 @@ requirements:
 test:
   requires:
     - pytest>=5.0
-    - pytest-cov>=2.8.1
-    - coveralls>=1.10
-    - coverage>=5.0
+    - pytest-rerunfailures
     - pytest-xdist
   imports:
     - pyxem
-    - pyxem.utils
-    - pyxem.detectors
     - pyxem.components
-    - pyxem.generators
-    - pyxem.signals
-    - pyxem.libraries
+    - pyxem.detectors
+    - pyxem.data
     - pyxem.dummy_data
+    - pyxem.generators
+    - pyxem.libraries
+    - pyxem.signals
+    - pyxem.utils
   commands:
-    - pytest --pyargs pyxem -n 2
+    - pytest --pyargs pyxem --reruns 2 -n 2
 
 about:
   home: https://github.com/pyxem/pyxem
