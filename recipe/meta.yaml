@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6be051f28530af117de27ff0f62c6843a9eaf96430bff18ba23ab16744b93684
+  sha256: 7cef314b4f2832d30889b4a463787467c46ac39695f025dd9ee4c6f2de8d64b6
 
 
 build:
