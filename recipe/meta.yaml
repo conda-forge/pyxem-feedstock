@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6be051f28530af117de27ff0f62c6843a9eaf96430bff18ba23ab16744b93684
+  sha256: 7cef314b4f2832d30889b4a463787467c46ac39695f025dd9ee4c6f2de8d64b6
 
 
 build:
@@ -21,26 +21,27 @@ requirements:
     - pip
     - python >=3
   run:
-    - python >=3
+    - python >=3.7
     - dask-core >=2021.8.1
     - diffsims >=0.5
-    - hyperspy-base >=1.7.0,<2.0rc0
+    - hyperspy-base >=2.0
     - h5py
     - lmfit >=0.9.12
-    - matplotlib-base >=3.3
+    - matplotlib-base >=3.6
     - numba
     - numpy
     - numexpr !=2.8.6
     - orix >=0.9
     - pooch
     - psutil
-    - pyfai-base
+    - pyfai-base <=2023.9.0
     - scikit-image >=0.19.0,!=0.21.0
     - scikit-learn >=1.0
     - scipy
     - tqdm
     - traits
     - transforms3d
+    - zarr
 
 test:
   requires:
