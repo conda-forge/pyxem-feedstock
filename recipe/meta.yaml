@@ -54,7 +54,6 @@ test:
     - pyxem.components
     - pyxem.detectors
     - pyxem.data
-    - pyxem.dummy_data
     - pyxem.generators
     - pyxem.libraries
     - pyxem.signals
