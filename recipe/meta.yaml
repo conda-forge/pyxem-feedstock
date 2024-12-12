@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.19.1" %}
+{% set version = "0.20.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e8fcb77fbc0165c474c92dcc8ce10d3bdfbad36794eca63a97df0dfe0bc8d85
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 354793b0494623a10563dabdfb6f80bd4caf6e18c75a19c2babba32910fbe08e
 
 
 build:
@@ -20,8 +20,9 @@ requirements:
   host:
     - pip
     - python >=3
+    - setuptools
   run:
-    - python >=3.7
+    - python >=3.8
     - dask-core >=2021.8.1
     - diffsims >=0.6
     - hyperspy-base >=2.0
@@ -34,7 +35,6 @@ requirements:
     - orix >=0.12.1
     - pooch
     - psutil
-    - pyfai-base <=2023.9.0
     - scikit-image >=0.19.0,!=0.21.0
     - scikit-learn >=1.0
     - shapely >2.0
@@ -52,7 +52,6 @@ test:
   imports:
     - pyxem
     - pyxem.components
-    - pyxem.detectors
     - pyxem.data
     - pyxem.generators
     - pyxem.libraries
