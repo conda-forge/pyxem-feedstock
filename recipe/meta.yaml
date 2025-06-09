@@ -42,7 +42,7 @@ requirements:
     - tqdm
     - traits
     - transforms3d
-    - zarr < 3.0.0
+    - zarr <3.0.0
 
 test:
   requires:
