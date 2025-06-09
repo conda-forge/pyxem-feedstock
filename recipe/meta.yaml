@@ -1,5 +1,5 @@
 {% set name = "pyxem" %}
-{% set version = "0.20.0" %}
+{% set version = "0.21.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 354793b0494623a10563dabdfb6f80bd4caf6e18c75a19c2babba32910fbe08e
+  sha256: a78d4fe1880c2f8033fb6b8245ce5f7a475bb8f6deede6a7c9d4ed57302b5cd4
 
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
@@ -24,11 +24,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - dask-core >=2021.8.1
-    - diffsims >=0.6
+    - diffsims >=0.7
     - hyperspy-base >=2.0
     - h5py
     - lmfit >=0.9.12
-    - matplotlib-base >=3.6
+    - matplotlib-base >=3.7.5
     - numba
     - numpy
     - numexpr !=2.8.6
@@ -42,7 +42,7 @@ requirements:
     - tqdm
     - traits
     - transforms3d
-    - zarr
+    - zarr <3.0.0
 
 test:
   requires:
