@@ -24,11 +24,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - dask-core >=2021.8.1
-    - diffsims >=0.6
+    - diffsims >=0.7
     - hyperspy-base >=2.0
     - h5py
     - lmfit >=0.9.12
-    - matplotlib-base >=3.6
+    - matplotlib-base >=3.7.5
     - numba
     - numpy
     - numexpr !=2.8.6
@@ -42,7 +42,7 @@ requirements:
     - tqdm
     - traits
     - transforms3d
-    - zarr
+    - zarr < 3.0.0
 
 test:
   requires:
